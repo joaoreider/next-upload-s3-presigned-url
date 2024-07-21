@@ -1,6 +1,6 @@
 "use client"
 import axios from 'axios'
-import { CloudUpload } from 'lucide-react'
+import { CloudUpload, Loader } from 'lucide-react'
 import React, { useState } from 'react'
 import { getSignedURL } from '@/app/actions'
 import uniqid from 'uniqid';
@@ -66,9 +66,9 @@ export default function UploadForm(props: UploadFormProps ) {
       }
   return (
     <label className="bg-green-600 py-2 px-6 rounded-full inline-flex gap-2 cursor-pointer">
-        {uploading && <span className='text-white'>Uploading...</span>}
+        {uploading && <span className='text-white'><Loader/></span>}
         <CloudUpload className="h-6 w-6" />
-        {!uploading && <span>Upload Video</span>}
+        {!uploading && <span>Upload</span>}
         <input type="file" className="bg-red-400 hidden" onChange={handleUpload} />
     </label>
   )

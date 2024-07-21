@@ -1,5 +1,3 @@
-import { CloudUpload } from "lucide-react";
-import DemoSection from "../components/DemoSection";
 import PageHeaders from "@/components/PageHeaders";
 import UploadForm from "@/components/UploadForm";
 
@@ -7,11 +5,10 @@ export default function Home() {
 
   return (
     <>
-      <PageHeaders h1Text="Add epic captions to your videos" h2Text="Just upload your video and we will do the rest" />
+      <PageHeaders h1Text="Upload file to AWS S3" h2Text="Pre-signed URL" />
       <div className="text-center">
         <UploadForm />
       </div>
-      < DemoSection />
     </>
 
   );
